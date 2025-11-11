@@ -1,0 +1,152 @@
+/* ============================================
+   IMPORTAR ESTILOS BASE
+   ============================================ */
+@import url('styles.css');
+
+/* ============================================
+   ESTILOS ESPECÍFICOS DE CONTACTO
+   ============================================ */
+.contact-section {
+    padding: var(--spacing-xl) 0;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+    align-items: center;
+}
+
+.contact-image img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-card);
+    transition: var(--transition);
+    border: 2px solid rgba(0, 217, 255, 0.2);
+}
+
+.contact-image img:hover {
+    transform: scale(1.03);
+    box-shadow: var(--shadow-card-hover);
+    border-color: var(--color-accent);
+}
+
+.contact-info {
+    background: linear-gradient(145deg, var(--color-bg-card) 0%, var(--color-bg-secondary) 100%);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-card);
+    border: 1px solid rgba(0, 217, 255, 0.2);
+}
+
+.contact-info h2 {
+    color: var(--color-accent);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin-bottom: var(--spacing-md);
+    text-shadow: var(--glow-cyan);
+}
+
+.description {
+    color: var(--color-text-muted);
+    line-height: 1.8;
+    margin-bottom: var(--spacing-lg);
+    font-size: 1.05rem;
+}
+
+/* ============================================
+   LISTA DE DETALLES
+   ============================================ */
+.contact-details {
+    margin: 0;
+}
+
+.detail-item {
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid rgba(0, 217, 255, 0.2);
+}
+
+.detail-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.detail-item dt {
+    font-weight: 700;
+    color: var(--color-accent);
+    margin-bottom: var(--spacing-xs);
+    font-size: 1.1rem;
+    text-shadow: 0 0 10px rgba(0, 217, 255, 0.3);
+}
+
+.detail-item dd {
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: 1rem;
+}
+
+.detail-item address {
+    font-style: normal;
+    line-height: 1.6;
+}
+
+.detail-item a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: var(--transition);
+    font-weight: 500;
+}
+
+.detail-item a:hover,
+.detail-item a:focus {
+    color: var(--color-accent);
+    text-decoration: underline;
+    text-shadow: var(--glow-cyan);
+}
+
+/* ============================================
+   RESPONSIVE - CONTACTO
+   ============================================ */
+
+/* Tablets */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .contact-image {
+        order: 1;
+    }
+
+    .contact-info {
+        order: 2;
+        padding: var(--spacing-md);
+    }
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+    .contact-section {
+        padding: var(--spacing-md) 0;
+    }
+
+    .contact-info {
+        padding: var(--spacing-sm);
+    }
+
+    .detail-item {
+        margin-bottom: var(--spacing-sm);
+        padding-bottom: var(--spacing-sm);
+    }
+
+    .detail-item dt {
+        font-size: 1rem;
+    }
+
+    .detail-item dd {
+        font-size: 0.95rem;
+    }
+}

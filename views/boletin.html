@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Solicita tu presupuesto personalizado en Video Game Universe. Completa el formulario y nos pondremos en contacto contigo.">
+    <title>Presupuesto Personalizado | Video Game Universe</title>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/boletin.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Video Game Universe</h1>
+            <p>Suscribirse a nuestro boletín</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="./productos.html">Productos</a></li>
+            <li><a href="#" class="active" aria-current="page">Boletín</a></li>
+            <li><a href="./contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="budget-form-section" aria-labelledby="form-title">
+            <div class="container">
+                <div class="form-wrapper">
+                    <h2 id="form-title" class="visually-hidden">Formulario de solicitud de presupuesto</h2>
+                    <form id="budgetForm" name="budgetForm" action="#" method="get" novalidate>
+                        <div class="form-group">
+                            <label for="first-name">Nombre <span aria-label="obligatorio">*</span></label>
+                            <input 
+                                type="text" 
+                                id="first-name" 
+                                name="first-name" 
+                                placeholder="Escribe tu nombre" 
+                                required 
+                                aria-required="true"
+                                minlength="2"
+                                maxlength="50">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico <span aria-label="obligatorio">*</span></label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                placeholder="ejemplo@correo.com" 
+                                required 
+                                aria-required="true">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telephone">Teléfono <span aria-label="obligatorio">*</span></label>
+                            <input 
+                                type="tel" 
+                                id="telephone" 
+                                name="telephone" 
+                                placeholder="+34 600 000 000" 
+                                required 
+                                aria-required="true"
+                                pattern="[0-9+\s]{9,15}">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="comentario">Tus juegos favoritos o consulta</label>
+                            <textarea 
+                                id="comentario" 
+                                name="comentario" 
+                                rows="6" 
+                                placeholder="Cuéntanos qué juegos te interesan o cualquier consulta que tengas..."
+                                maxlength="500"></textarea>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <input 
+                                type="checkbox" 
+                                id="accept" 
+                                name="accept" 
+                                required 
+                                aria-required="true">
+                            <label for="accept">
+                                He leído y acepto la <a href="#" target="_blank" rel="noopener">política de privacidad de datos</a> <span aria-label="obligatorio">*</span>
+                            </label>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Enviar Solicitud</button>
+                            <button type="reset" class="btn btn-secondary">Limpiar Formulario</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://www.instagram.com" aria-label="Visitar nuestro Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+
+                <a href="https://www.facebook.com" aria-label="Visitar nuestro Facebook" rel="noopener noreferrer" target="_blank"><i class="fab fa-facebook"></i></a>
+                
+                <a href="https://www.x.com" aria-label="Visitar nuestro perfil en X (Twitter)" rel="noopener noreferrer" target="_blank"><i class="fab fa-x"></i></a>
+                </a>
+            </div>
+            <address>Plaza Nervión, Sevilla</address>
+            <p class="copyright">&copy; 2025 Video Game Universe. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
